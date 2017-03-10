@@ -1,0 +1,16 @@
+sclyy.cpp 
+
+simple computation of Cl_yy 
+by Samuel Flender
+
+this code computes the 1-halo term of the y-y auto power spectrum:
+
+Cl_yy = int dz dV/dz/dOmega int dM dn/dM (y_ell(M,z))^2
+
+which is mathematically equivalent to 
+
+Cl_yy = (1/(4*pi)) sum_ij DeltaN(M_i,z_j) y_ell(M_i,z_j)^2
+
+where DeltaN is the binned halo count on the lightcone.
+
+The DeltaN_i,j components are counted in the lightcone simulation which needs to be provided as input parameter.
